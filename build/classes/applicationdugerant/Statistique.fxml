@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="applicationdugerant.StatistiqueController">
+   <children>
+      <Pane id="app_afficher" prefHeight="900.0" prefWidth="1769.0" style="-fx-background-color: #2f2b43; -fx-background-radius: 5;">
+         <children>
+            <AnchorPane layoutY="-2.0" prefHeight="900.0" prefWidth="338.0" style="-fx-background-color: #393351;">
+               <children>
+                  <VBox layoutY="387.0" prefHeight="203.0" prefWidth="336.0">
+                     <children>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#PaneAfficher" prefHeight="71.0" prefWidth="336.0" stylesheets="@gestiondurestaurant.css" text="Afficher statistique " textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Deconnecter" prefHeight="71.0" prefWidth="348.0" stylesheets="@gestiondurestaurant.css" text="Déconnexion" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <Pane layoutX="1.0" layoutY="274.0" prefHeight="77.0" prefWidth="336.0" style="-fx-background-color: #ff0000; -fx-background-radius: 5;">
+                     <children>
+                        <Label layoutX="95.0" layoutY="27.0" text="Les statistiques" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="141.0" fitWidth="141.0" layoutX="87.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/l2.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="38.0" fitWidth="37.0" layoutX="172.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/iconfinder_Cute%20Ball%20-%20Go_32133.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="107.0" layoutY="205.0" prefHeight="29.0" prefWidth="65.0" text="Online" textFill="#72ff36eb">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="125.0" layoutY="124.0" prefHeight="17.0" prefWidth="65.0" text="My resto" textFill="#ffa900">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane id="ap_home" fx:id="ap_home" layoutX="337.0" layoutY="-1.0" prefHeight="900.0" prefWidth="1440.0" style="-fx-background-color: #2f2b43 #2f2b43;">
+               <children>
+                  <Pane layoutX="-25.0" layoutY="-178.0" prefHeight="320.0" prefWidth="545.0" rotate="41.6" style="-fx-background-color: #ff0000; -fx-background-radius: 70;" />
+                  <Label layoutX="207.0" layoutY="304.0" prefHeight="387.0" prefWidth="1211.0" text="Les statistiques" textFill="WHITE">
+                     <font>
+                        <Font size="96.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="1006.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/garage-2.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton layoutX="1006.0" layoutY="93.0" onAction="#retour" prefHeight="65.0" prefWidth="65.0" ripplerFill="#393351" text="Home" textFill="TRANSPARENT" />
+               </children>
+            </AnchorPane>
+            <Pane id="ap_afficher" fx:id="ap_afficher" layoutX="336.0" prefHeight="900.0" prefWidth="1440.0" style="-fx-background-color: #2f2b43 #2f2b43;">
+               <children>
+                  <Pane layoutX="-25.0" layoutY="-178.0" prefHeight="320.0" prefWidth="545.0" rotate="41.6" style="-fx-background-color: #ff0000; -fx-background-radius: 70;" />
+                  <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="1006.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/garage-2.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton layoutX="1006.0" layoutY="93.0" onAction="#retour" prefHeight="65.0" prefWidth="65.0" ripplerFill="#393351" text="Home" textFill="TRANSPARENT" />
+                  <Label id="l1" fx:id="l11" layoutX="267.0" layoutY="334.0" prefHeight="40.0" prefWidth="359.0" text="Nombres de plats commandés" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label id="l3" fx:id="l31" layoutX="267.0" layoutY="414.0" prefHeight="40.0" prefWidth="258.0" text="Nombres de clients" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label id="l4" fx:id="l41" layoutX="267.0" layoutY="489.0" prefHeight="40.0" prefWidth="359.0" text="Chiffre d'affaire journalier" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label id="l6" fx:id="l61" layoutX="267.0" layoutY="568.0" prefHeight="40.0" prefWidth="414.0" text="Moyenne de notation du restaurant" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField id="tf1" fx:id="nombreDeCommandes" editable="false" focusColor="WHITE" layoutX="728.0" layoutY="340.0" prefHeight="40.0" prefWidth="133.0" styleClass="jfx-text-field" stylesheets="@gestiondurestaurant.css" />
+                  <JFXTextField id="tf4" fx:id="moyenneRestaurant" editable="false" focusColor="WHITE" layoutX="728.0" layoutY="569.0" prefHeight="40.0" prefWidth="133.0" styleClass="jfx-text-field" stylesheets="@gestiondurestaurant.css" />
+                  <JFXTextField id="tf3" fx:id="chiffreAfaire" editable="false" focusColor="WHITE" layoutX="729.0" layoutY="490.0" prefHeight="40.0" prefWidth="133.0" styleClass="jfx-text-field" stylesheets="@gestiondurestaurant.css" />
+                  <JFXTextField id="tf2" fx:id="nombreDeClients" editable="false" focusColor="WHITE" layoutX="732.0" layoutY="410.0" prefHeight="40.0" prefWidth="133.0" styleClass="jfx-text-field" stylesheets="@gestiondurestaurant.css" />
+                  <Label id="l6" fx:id="l611" layoutX="267.0" layoutY="638.0" prefHeight="40.0" prefWidth="359.0" text="Prix moyen d'une commande" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField id="tf4" fx:id="prixMoyenneCommande" editable="false" focusColor="WHITE" layoutX="728.0" layoutY="639.0" prefHeight="40.0" prefWidth="133.0" styleClass="jfx-text-field" stylesheets="@gestiondurestaurant.css" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

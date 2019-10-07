@@ -1,0 +1,36 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.jfx-text-field {
+    -fx-text-inner-color: WHITE;
+    -fx-font-size: 20px;
+}
+.jfx-text-area {
+    -fx-text-inner-color: WHITE;
+    -fx-font-size: 20px;
+}
+.button
+{
+    -fx-background-color: #393351;
+    -fx-background-radius: 30 0 0 30;
+}
+.button:hover
+{
+    -fx-background-color: #524A7B;
+    -fx-background-radius: 30 0 0 30;
+}
+.button:pressed
+{
+    -fx-background-color: #2F2B43;
+    -fx-background-radius: 30 0 0 30;
+}
+.jfx-time-picker .text-field
+{
+    -fx-prompt-text-fill:white;
+    -fx-font-size : 20px
+}

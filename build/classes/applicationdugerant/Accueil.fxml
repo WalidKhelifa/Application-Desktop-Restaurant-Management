@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnochorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1440.0" style="-fx-background-color: #20120F;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="applicationdugerant.AccueilController">
+   <children>
+      <ImageView fitHeight="900.0" fitWidth="1440.0" pickOnBounds="true">
+         <image>
+            <Image url="@images/ff2.JPG" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="29.0" layoutY="105.0" prefHeight="604.0" prefWidth="368.0" style="-fx-background-color: #ead6aa;">
+         <children>
+            <JFXTextField fx:id="username" focusColor="BLACK" labelFloat="true" layoutX="65.0" layoutY="234.0" prefHeight="34.0" prefWidth="273.0" promptText="Utilisateur/Email" unFocusColor="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font></JFXTextField>
+            <JFXPasswordField fx:id="password" focusColor="BLACK" labelFloat="true" layoutX="65.0" layoutY="320.0" prefHeight="34.0" prefWidth="273.0" promptText="Mot de passe" unFocusColor="WHITE" />
+            <JFXButton layoutX="91.0" layoutY="421.0" onAction="#seConnecter" prefHeight="44.0" prefWidth="186.0" style="-fx-background-color: #000000; -fx-background-radius: 10 0 0 00;" stylesheets="@accueil.css" text="Se connecter" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font></JFXButton>
+            <Label layoutX="122.0" layoutY="99.0" prefHeight="44.0" prefWidth="160.0" text="Connexion">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="123.0" fitWidth="134.0" layoutX="117.0" layoutY="-9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/l2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="31.0" layoutX="22.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/iconfinder_user_male2_172626.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="31.0" layoutX="22.0" layoutY="321.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/iconfinder_icons_password_1564520.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="397.0" layoutY="105.0" prefHeight="604.0" prefWidth="316.0" style="-fx-background-color: #eedfbd;">
+         <children>
+            <JFXTextField fx:id="user" focusColor="BLACK" labelFloat="true" layoutX="37.0" layoutY="189.0" prefHeight="27.0" prefWidth="243.0" promptText="Utilisateur" unFocusColor="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="email" focusColor="BLACK" labelFloat="true" layoutX="37.0" layoutY="265.0" prefHeight="27.0" prefWidth="243.0" promptText="Email" unFocusColor="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font></JFXTextField>
+            <JFXPasswordField fx:id="pass" focusColor="BLACK" labelFloat="true" layoutX="37.0" layoutY="341.0" prefHeight="27.0" prefWidth="243.0" promptText="Mot de passe" unFocusColor="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font></JFXPasswordField>
+            <Label layoutX="104.0" layoutY="50.0" prefHeight="44.0" prefWidth="123.0" text="Inscription">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="62.0" layoutY="420.0" onAction="#inscrire" prefHeight="44.0" prefWidth="186.0" style="-fx-background-color: #000000; -fx-background-radius: 10 0 0 00;" text="S'inscrire" textFill="WHITE" />
+            <Label fx:id="erreur" layoutX="73.0" layoutY="477.0" prefHeight="65.0" prefWidth="201.0" textFill="#c30f0f">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

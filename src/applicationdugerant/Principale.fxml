@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="applicationdugerant.PrincipaleController">
+   <children>
+      <Pane prefHeight="900.0" prefWidth="1440.0" style="-fx-background-color: #2f2b43; -fx-background-radius: 5;">
+         <children>
+            <AnchorPane layoutY="-2.0" prefHeight="900.0" prefWidth="371.0" style="-fx-background-color: #393351;">
+               <children>
+                  <VBox layoutY="298.0" prefHeight="470.0" prefWidth="372.0">
+                     <children>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#gestionDuPersonnel" prefHeight="63.0" prefWidth="372.0" styleClass="buttonPersonnel" stylesheets="@Principale.css" text="       Gestion personnel" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/teamwork.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#gestionDuMenu" prefHeight="63.0" prefWidth="372.0" styleClass="buttonMenu" stylesheets="@Principale.css" text="       Gestion menu" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/clipboard.png" />
+                                 </image></ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#gestionDuRestaurant" prefHeight="63.0" prefWidth="372.0" styleClass="buttonRestaurant" stylesheets="@Principale.css" text="       Gestion restaurant" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/store.png" />
+                                 </image></ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#gestionDesCommandes" prefHeight="63.0" prefWidth="372.0" styleClass="buttonCommande" stylesheets="@Principale.css" text="       Gestion des commandes " textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/dish.png" />
+                                 </image></ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#gestionDesReservation" prefHeight="63.0" prefWidth="372.0" styleClass="buttonReservation" stylesheets="@Principale.css" text="       Gestion des réservations" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/online-booking.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Consultation" prefHeight="63.0" prefWidth="372.0" styleClass="buttonFeedbacks" stylesheets="@Principale.css" text="       Gestion des feedbacks " textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/digital-campaign.png" />
+                                 </image></ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Statistique" prefHeight="63.0" prefWidth="372.0" styleClass="buttonFeedbacks" stylesheets="@Principale.css" text="       Statistiques" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/report.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Deconnecter" prefHeight="63.0" prefWidth="372.0" stylesheets="@Principale.css" text="       Déconnexion" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/logout-2.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <Pane layoutX="-4.0" layoutY="195.0" prefHeight="77.0" prefWidth="379.0" style="-fx-background-color: #FA2C56; -fx-background-radius: 5;">
+                     <children>
+                        <Label layoutX="138.0" layoutY="22.0" text="Accueil" textFill="WHITE">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                     </children></Pane>
+                  <ImageView fitHeight="151.0" fitWidth="156.0" layoutX="101.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/l2.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="38.0" fitWidth="37.0" layoutX="191.0" layoutY="133.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/iconfinder_Cute%20Ball%20-%20Go_32133.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="126.0" layoutY="137.0" prefHeight="29.0" prefWidth="65.0" text="Online" textFill="#72ff36eb">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Pane layoutX="372.0" prefHeight="900.0" prefWidth="1397.0">
+               <children>
+                  <Pane layoutX="-25.0" layoutY="-178.0" prefHeight="320.0" prefWidth="545.0" rotate="41.6" style="-fx-background-color: #FA2C56; -fx-background-radius: 70;" />
+                  <Button layoutX="78.0" layoutY="294.0" mnemonicParsing="false" onAction="#gestionDuPersonnel" prefHeight="166.0" prefWidth="167.0" styleClass="buttonPersonnel" stylesheets="@Principale.css" />
+                  <Circle fill="DODGERBLUE" layoutX="163.0" layoutY="377.0" radius="57.0" stroke="BLACK" strokeType="INSIDE" />
+                  <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="133.0" layoutY="345.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/teamwork.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="578.0" layoutY="296.0" mnemonicParsing="false" onAction="#gestionDuRestaurant" prefHeight="166.0" prefWidth="167.0" styleClass="buttonRestaurant" stylesheets="@Principale.css" />
+                  <Circle fill="DODGERBLUE" layoutX="662.0" layoutY="380.0" radius="57.0" stroke="BLACK" strokeType="INSIDE" />
+                  <ImageView fitHeight="71.0" fitWidth="65.0" layoutX="629.0" layoutY="348.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/store.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="328.0" layoutY="294.0" mnemonicParsing="false" onAction="#gestionDuMenu" prefHeight="166.0" prefWidth="167.0" styleClass="buttonMenu" stylesheets="@Principale.css" />
+                  <Circle fill="DODGERBLUE" layoutX="411.0" layoutY="379.0" radius="57.0" stroke="BLACK" strokeType="INSIDE" />
+                  <ImageView fitHeight="65.0" fitWidth="89.0" layoutX="378.0" layoutY="347.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/clipboard.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="80.0" layoutY="593.0" mnemonicParsing="false" onAction="#gestionDesReservation" prefHeight="166.0" prefWidth="167.0" styleClass="buttonReservation" stylesheets="@Principale.css" />
+                  <Circle fill="DODGERBLUE" layoutX="164.0" layoutY="676.0" radius="63.0" stroke="BLACK" strokeType="INSIDE" />
+                  <ImageView fitHeight="71.0" fitWidth="71.0" layoutX="129.0" layoutY="651.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/online-booking.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="328.0" layoutY="593.0" mnemonicParsing="false" onAction="#Consultation" prefHeight="166.0" prefWidth="167.0" styleClass="buttonFeedbacks" stylesheets="@Principale.css" />
+                  <Circle fill="DODGERBLUE" layoutX="412.0" layoutY="676.0" radius="63.0" stroke="BLACK" strokeType="INSIDE" />
+                  <ImageView fitHeight="71.0" fitWidth="71.0" layoutX="377.0" layoutY="641.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/digital-campaign.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="829.0" layoutY="298.0" mnemonicParsing="false" onAction="#gestionDesCommandes" prefHeight="166.0" prefWidth="167.0" styleClass="buttonCommande" stylesheets="@Principale.css" />
+                  <Circle fill="DODGERBLUE" layoutX="917.0" layoutY="381.0" radius="63.0" stroke="BLACK" strokeType="INSIDE" />
+                  <ImageView fitHeight="77.0" fitWidth="71.0" layoutX="882.0" layoutY="345.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/dish.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="579.0" layoutY="594.0" mnemonicParsing="false" onAction="#Statistique" prefHeight="166.0" prefWidth="167.0" styleClass="buttonRestaurant" stylesheets="@Principale.css" />
+                  <Circle fill="DODGERBLUE" layoutX="663.0" layoutY="678.0" radius="63.0" stroke="BLACK" strokeType="INSIDE" />
+                  <ImageView fitHeight="77.0" fitWidth="71.0" layoutX="628.0" layoutY="643.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/report.png" />
+                     </image></ImageView>
+                  <Button layoutX="828.0" layoutY="594.0" mnemonicParsing="false" onAction="#Deconnecter" prefHeight="166.0" prefWidth="167.0" styleClass="buttonFeedbacks" stylesheets="@Principale.css" />
+                  <Circle fill="DODGERBLUE" layoutX="912.0" layoutY="677.0" radius="63.0" stroke="BLACK" strokeType="INSIDE" />
+                  <ImageView fitHeight="71.0" fitWidth="71.0" layoutX="877.0" layoutY="642.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/logout-2.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

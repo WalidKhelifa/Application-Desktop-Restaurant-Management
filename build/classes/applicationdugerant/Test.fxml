@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1064.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXTextField editable="false" layoutX="404.0" layoutY="185.0" prefHeight="27.0" prefWidth="384.0" />
+      <JFXTextField editable="false" layoutX="404.0" layoutY="263.0" prefHeight="27.0" prefWidth="384.0" />
+      <JFXTextField editable="false" layoutX="404.0" layoutY="340.0" prefHeight="27.0" prefWidth="384.0" />
+      <JFXTextField editable="false" layoutX="404.0" layoutY="411.0" prefHeight="27.0" prefWidth="384.0" />
+      <JFXTextField editable="false" layoutX="404.0" layoutY="487.0" prefHeight="27.0" prefWidth="384.0" />
+      <JFXTextField editable="false" layoutX="404.0" layoutY="580.0" prefHeight="27.0" prefWidth="384.0" />
+      <Label layoutX="93.0" layoutY="185.0" prefHeight="30.0" prefWidth="240.0" text="Nom du restaurant">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="93.0" layoutY="263.0" prefHeight="30.0" prefWidth="240.0" text="Description ">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="93.0" layoutY="340.0" prefHeight="30.0" prefWidth="258.0" text="Numero de telephone">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="93.0" layoutY="424.0" prefHeight="30.0" prefWidth="240.0" text="Email">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="93.0" layoutY="500.0" prefHeight="30.0" prefWidth="240.0" text="Adresse">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="93.0" layoutY="592.0" prefHeight="30.0" prefWidth="240.0" text="Horaire d'ouverture">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

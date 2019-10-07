@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="applicationdugerant.GestionDuPersonnelController">
+   <children>
+      <Pane id="app_afficher" prefHeight="900.0" prefWidth="1769.0" style="-fx-background-color: #2f2b43; -fx-background-radius: 5;">
+         <children>
+            <AnchorPane id="ap_supprimer" fx:id="ap_supprimer" layoutX="336.0" prefHeight="900.0" prefWidth="1440.0" style="-fx-background-color: #2f2b43 #2f2b43 #2f2b43;">
+               <children>
+                  <TableView fx:id="table1" layoutX="29.0" layoutY="283.0" prefHeight="504.0" prefWidth="1058.0" stylesheets="@gestiondupersonnel.css">
+                     <columns>
+                        <TableColumn id="columnId" fx:id="columnNom1" prefWidth="106.0" text="Nom " />
+                        <TableColumn id="columnDesignation" fx:id="columnPrenom1" prefWidth="107.0" text="Prenom" />
+                        <TableColumn id="columnDateAjout" fx:id="columnDateNaissance1" minWidth="9.0" prefWidth="120.0" text="Date de naissance" />
+                        <TableColumn id="columnCategorie" fx:id="columnGenre1" prefWidth="89.0" text="Genre" />
+                        <TableColumn id="columnModeCuisson" fx:id="columnAdresse1" prefWidth="118.0" text="Adresse" />
+                        <TableColumn id="columnTempsCuisson" fx:id="columnNumeroTel1" prefWidth="145.0" text="Numero de telephone" />
+                        <TableColumn id="columnUsername_ger" fx:id="columnEmail1" prefWidth="141.0" text="Email" />
+                        <TableColumn id="columnUsername_ger" fx:id="columnType_personnel1" prefWidth="113.0" resizable="false" text="Type " />
+                        <TableColumn id="columnUsername_ger" fx:id="columnUserGerant1" prefWidth="117.0" resizable="false" text="Ajouté par" />
+                     </columns>
+                  </TableView>
+                  <Button layoutX="990.0" layoutY="242.0" mnemonicParsing="false" onAction="#delete" onKeyTyped="#delete" prefHeight="35.0" prefWidth="97.0" style="-fx-background-color: #ea3e3e;" text="Supprimer" textFill="WHITE" />
+                  <Pane layoutX="-25.0" layoutY="-178.0" prefHeight="320.0" prefWidth="545.0" rotate="41.6" style="-fx-background-color: #46c43c; -fx-background-radius: 70;" />
+                  <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="1006.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/garage-2.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton layoutX="1006.0" layoutY="63.0" onAction="#retour" prefHeight="65.0" prefWidth="65.0" ripplerFill="#393351" text="Home" textFill="TRANSPARENT" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="-2.0" prefHeight="900.0" prefWidth="338.0" style="-fx-background-color: #393351;">
+               <children>
+                  <VBox layoutX="1.0" layoutY="387.0" prefHeight="387.0" prefWidth="336.0">
+                     <children>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#AfficherPersonnel" prefHeight="71.0" prefWidth="337.0" stylesheets="@gestiondurestaurant.css" text="Liste du personnel" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#PaneAjouter" prefHeight="71.0" prefWidth="348.0" stylesheets="@gestiondurestaurant.css" text="Ajouter personnel" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#ModifierPersonnel" prefHeight="71.0" prefWidth="348.0" stylesheets="@gestiondurestaurant.css" text="Modifier personnel" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#AfficherlistAffectation" prefHeight="71.0" prefWidth="348.0" stylesheets="@gestiondurestaurant.css" text="Liste des affectations" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Deconnecter" prefHeight="71.0" prefWidth="348.0" stylesheets="@gestiondurestaurant.css" text="Déconnexion" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <Pane layoutY="274.0" prefHeight="77.0" prefWidth="336.0" style="-fx-background-color: #46c43c#46c43c; -fx-background-radius: 5;">
+                     <children>
+                        <Label layoutX="77.0" layoutY="27.0" text="Gestion Personnel">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="141.0" fitWidth="141.0" layoutX="87.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/l2.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="38.0" fitWidth="37.0" layoutX="172.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/iconfinder_Cute%20Ball%20-%20Go_32133.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="107.0" layoutY="205.0" prefHeight="29.0" prefWidth="65.0" text="Online" textFill="#72ff36eb">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="125.0" layoutY="124.0" prefHeight="17.0" prefWidth="65.0" text="My resto" textFill="#ffa900">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="ap_affecter" layoutX="337.0" layoutY="-1.0" prefHeight="900.0" prefWidth="1440.0" style="-fx-background-color: #2f2b43 #2f2b43 #2f2b43;">
+               <children>
+                  <Pane layoutX="-25.0" layoutY="-178.0" prefHeight="320.0" prefWidth="545.0" rotate="41.6" style="-fx-background-color: #46c43c; -fx-background-radius: 70;" />
+                  <TableView fx:id="table2" layoutX="29.0" layoutY="283.0" prefHeight="504.0" prefWidth="1058.0" stylesheets="@gestiondupersonnel.css">
+                     <columns>
+                        <TableColumn id="columnId" fx:id="columnNom2" prefWidth="106.0" text="Nom Personnel" />
+                        <TableColumn id="columnDesignation" fx:id="columnPrenom2" prefWidth="107.0" text="Prenom" />
+                        <TableColumn id="columnDateAjout" fx:id="columnDateNaissance2" minWidth="9.0" prefWidth="120.0" text="Date de naissance" />
+                        <TableColumn id="columnCategorie" fx:id="columnGenre2" prefWidth="89.0" text="Genre" />
+                        <TableColumn id="columnModeCuisson" fx:id="columnAdresse2" prefWidth="118.0" text="Adresse" />
+                        <TableColumn id="columnTempsCuisson" fx:id="columnNumeroTel2" prefWidth="145.0" text="Numero de telephone" />
+                        <TableColumn id="columnUsername_ger" fx:id="columnEmail2" prefWidth="141.0" text="Email" />
+                        <TableColumn id="columnUsername_ger" fx:id="columnType_personnel2" prefWidth="113.0" resizable="false" text="Type Personnel" />
+                        <TableColumn id="columnUsername_ger" fx:id="columnUserGerant2" prefWidth="117.0" resizable="false" text="username_ger" />
+                     </columns>
+                  </TableView>
+                  <JFXButton fx:id="btnAffecter" layoutX="984.0" layoutY="239.0" maxWidth="97.0" onAction="#affecter" prefHeight="35.0" prefWidth="97.0" style="-fx-background-color: #4900ff;" text="Affecter" textFill="WHITE" />
+                  <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="1006.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/garage-2.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton layoutX="1006.0" layoutY="63.0" onAction="#retour" prefHeight="65.0" prefWidth="65.0" ripplerFill="#393351" text="Home" textFill="TRANSPARENT" />
+               </children>
+            </AnchorPane>
+            <AnchorPane id="ap_home" fx:id="ap_home" layoutX="337.0" layoutY="-1.0" prefHeight="900.0" prefWidth="1440.0" style="-fx-background-color: #2f2b43 #2f2b43;">
+               <children>
+                  <Pane layoutX="-25.0" layoutY="-178.0" prefHeight="320.0" prefWidth="545.0" rotate="41.6" style="-fx-background-color: #46c43c; -fx-background-radius: 70;" />
+                  <Label layoutX="129.0" layoutY="247.0" prefHeight="387.0" prefWidth="1211.0" text="Gestion Personnel" textFill="WHITE">
+                     <font>
+                        <Font size="96.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="1006.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/garage-2.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton layoutX="1006.0" layoutY="63.0" onAction="#retour" prefHeight="65.0" prefWidth="65.0" ripplerFill="#393351" text="Home" textFill="TRANSPARENT" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="ap_confirme_modifay" layoutX="336.0" prefHeight="900.0" prefWidth="1440.0" style="-fx-background-color: #2f2b43 #2f2b43 #2f2b43;">
+               <children>
+                  <Label fx:id="l111" layoutX="109.0" layoutY="277.0" prefHeight="30.0" prefWidth="240.0" text="Nom " textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label id="l3" fx:id="l311" layoutX="109.0" layoutY="337.0" prefHeight="30.0" prefWidth="258.0" text="Prénom " textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label id="l4" fx:id="l411" layoutX="109.0" layoutY="397.0" prefHeight="30.0" prefWidth="258.0" text="Numéro de téléphone" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label id="l6" fx:id="l611" layoutX="109.0" layoutY="457.0" prefHeight="30.0" prefWidth="240.0" text="Date de naissance" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="add_nom1" focusColor="WHITE" layoutX="464.0" layoutY="270.0" prefHeight="27.0" prefWidth="384.0" styleClass="jfx-text-field" stylesheets="@gestiondupersonnel.css" />
+                  <JFXTextField fx:id="add_numero_tel1" focusColor="WHITE" layoutX="464.0" layoutY="390.0" prefHeight="27.0" prefWidth="384.0" styleClass="jfx-text-field" stylesheets="@gestiondurestaurant.css" />
+                  <JFXTextField fx:id="add_prenom1" focusColor="WHITE" layoutX="464.0" layoutY="330.0" prefHeight="27.0" prefWidth="384.0" styleClass="jfx-text-field" stylesheets="@gestiondurestaurant.css" />
+                  <JFXDatePicker fx:id="add_date1" editable="false" layoutX="464.0" layoutY="450.0" prefHeight="40.0" prefWidth="394.0" styleClass="jfx-date-picker" stylesheets="@gestiondupersonnel.css" />
+                  <JFXComboBox fx:id="genre1" layoutX="464.0" layoutY="520.0" prefHeight="35.0" prefWidth="384.0" promptText=" Homme" styleClass="jfx-combo-box" stylesheets="@gestiondupersonnel.css" />
+                  <Label id="l6" fx:id="l6122" layoutX="109.0" layoutY="517.0" prefHeight="30.0" prefWidth="240.0" text="Genre " textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="add_email1" focusColor="WHITE" layoutX="464.0" layoutY="570.0" prefHeight="40.0" prefWidth="394.0" styleClass="jfx-text-field" stylesheets="@gestiondupersonnel.css" />
+                  <Label id="l6" fx:id="l61212" layoutX="109.0" layoutY="577.0" prefHeight="30.0" prefWidth="240.0" text="Email" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox fx:id="type_personnel1" layoutX="464.0" layoutY="635.0" prefHeight="35.0" prefWidth="384.0" promptText=" Cuisinier" stylesheets="@gestiondupersonnel.css" />
+                  <Label id="l6" fx:id="l612112" layoutX="109.0" layoutY="637.0" prefHeight="30.0" prefWidth="240.0" text="Type" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="109.0" layoutY="760.0" onAction="#ConfirmerModification" prefHeight="48.0" prefWidth="205.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10 0 0 00;" text="Confirmer" />
+                  <Label id="l6" fx:id="l6121111" layoutX="109.0" layoutY="697.0" prefHeight="30.0" prefWidth="240.0" text="Adresse" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="-25.0" layoutY="-178.0" prefHeight="320.0" prefWidth="545.0" rotate="41.6" style="-fx-background-color: #46c43c; -fx-background-radius: 70;" />
+                  <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="1006.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/garage-2.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton layoutX="1006.0" layoutY="63.0" onAction="#retour" prefHeight="65.0" prefWidth="65.0" ripplerFill="#393351" text="Home" textFill="TRANSPARENT" />
+                  <JFXTextArea fx:id="adresse_personnel1" focusColor="WHITE" layoutX="463.0" layoutY="696.0" prefHeight="6.0" prefWidth="385.0" style="-fx-background-color: #2f2b43 #2f2b43 #2f2b43 #2f2b43;" styleClass="jfx-text-area" stylesheets="@gestiondumenu.css" unFocusColor="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </JFXTextArea>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="ap_modifier" layoutX="336.0" prefHeight="900.0" prefWidth="1440.0" style="-fx-background-color: #2f2b43 #2f2b43 #2f2b43;">
+               <children>
+                  <TableView fx:id="table4" layoutX="29.0" layoutY="283.0" prefHeight="504.0" prefWidth="1058.0" stylesheets="@gestiondupersonnel.css">
+                     <columns>
+                        <TableColumn id="columnId" fx:id="columnNom4" prefWidth="106.0" text="Nom " />
+                        <TableColumn id="columnDesignation" fx:id="columnPrenom4" prefWidth="107.0" text="Prénom" />
+                        <TableColumn id="columnDateAjout" fx:id="columnDateNaissance4" minWidth="9.0" prefWidth="120.0" text="Date de naissance" />
+                        <TableColumn id="columnCategorie" fx:id="columnGenre4" prefWidth="89.0" text="Genre" />
+                        <TableColumn id="columnModeCuisson" fx:id="columnAdresse4" prefWidth="118.0" text="Adresse" />
+                        <TableColumn id="columnTempsCuisson" fx:id="columnNumeroTel4" prefWidth="145.0" text="Numéro de téléphone" />
+                        <TableColumn id="columnUsername_ger" fx:id="columnEmail4" prefWidth="141.0" text="Email" />
+                        <TableColumn id="columnUsername_ger" fx:id="columnType_personnel4" prefWidth="113.0" resizable="false" text="Type " />
+                        <TableColumn id="columnUsername_ger" fx:id="columnUserGerant4" prefWidth="117.0" resizable="false" text="Inscrit par" />
+                     </columns>
+                  </TableView>
+                  <JFXButton fx:id="btnmodifier" layoutX="990.0" layoutY="242.0" maxWidth="97.0" onAction="#PaneModifier" prefHeight="35.0" prefWidth="97.0" style="-fx-background-color: #03501f;" text="Modifier" textFill="WHITE" />
+                  <Pane layoutX="-25.0" layoutY="-178.0" prefHeight="320.0" prefWidth="545.0" rotate="41.6" style="-fx-background-color: #46c43c; -fx-background-radius: 70;" />
+                  <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="1006.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/garage-2.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton layoutX="1006.0" layoutY="63.0" onAction="#retour" prefHeight="65.0" prefWidth="65.0" ripplerFill="#393351" text="Home" textFill="TRANSPARENT" />
+               </children>
+            </AnchorPane>
+            <AnchorPane id="ap_ajouter" fx:id="ap_ajouter" layoutX="336.0" prefHeight="900.0" prefWidth="1440.0" style="-fx-background-color: #2f2b43 #2f2b43;">
+               <children>
+                  <Label fx:id="l11" layoutX="109.0" layoutY="277.0" prefHeight="30.0" prefWidth="240.0" text="Nom " textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label id="l3" fx:id="l31" layoutX="109.0" layoutY="337.0" prefHeight="30.0" prefWidth="258.0" text="Prénom " textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label id="l4" fx:id="l41" layoutX="109.0" layoutY="397.0" prefHeight="30.0" prefWidth="258.0" text="Numéro de téléphone" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label id="l6" fx:id="l61" layoutX="109.0" layoutY="457.0" prefHeight="30.0" prefWidth="240.0" text="Date de naissance" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="add_nom" focusColor="WHITE" layoutX="464.0" layoutY="270.0" prefHeight="27.0" prefWidth="384.0" styleClass="jfx-text-field" stylesheets="@gestiondupersonnel.css" />
+                  <JFXTextField fx:id="add_prenom" focusColor="WHITE" layoutX="464.0" layoutY="330.0" prefHeight="27.0" prefWidth="384.0" styleClass="jfx-text-field" stylesheets="@gestiondurestaurant.css" />
+                  <JFXTextField fx:id="add_numero_tel" focusColor="WHITE" layoutX="464.0" layoutY="390.0" prefHeight="27.0" prefWidth="384.0" styleClass="jfx-text-field" stylesheets="@gestiondurestaurant.css" />
+                  <Pane layoutX="-25.0" layoutY="-178.0" prefHeight="320.0" prefWidth="545.0" rotate="41.6" style="-fx-background-color: #46c43c; -fx-background-radius: 70;" />
+                  <JFXDatePicker fx:id="add_date" editable="false" layoutX="464.0" layoutY="450.0" prefHeight="40.0" prefWidth="394.0" styleClass="jfx-date-picker" stylesheets="@gestiondupersonnel.css" />
+                  <JFXComboBox fx:id="genre" layoutX="464.0" layoutY="520.0" prefHeight="35.0" prefWidth="384.0" promptText="  Homme" styleClass="jfx-combo-box" stylesheets="@gestiondupersonnel.css" />
+                  <Label id="l6" fx:id="l612" layoutX="109.0" layoutY="517.0" prefHeight="30.0" prefWidth="240.0" text="Genre" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="add_email" focusColor="WHITE" layoutX="464.0" layoutY="570.0" prefHeight="40.0" prefWidth="394.0" styleClass="jfx-text-field" stylesheets="@gestiondupersonnel.css" />
+                  <Label id="l6" fx:id="l6121" layoutX="109.0" layoutY="577.0" prefHeight="30.0" prefWidth="240.0" text="Email" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox fx:id="type_personnel" layoutX="464.0" layoutY="635.0" prefHeight="35.0" prefWidth="384.0" promptText="  Cuisinier" stylesheets="@gestiondupersonnel.css" />
+                  <JFXTextArea fx:id="adresse_personnel" focusColor="WHITE" labelFloat="true" layoutX="466.0" layoutY="697.0" pickOnBounds="false" prefHeight="37.0" prefWidth="385.0" style="-fx-background-color: #2f2b43 #2f2b43 #2f2b43 #2f2b43;" styleClass="jfx-text-area" stylesheets="@gestiondumenu.css" unFocusColor="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </JFXTextArea>
+                  <Label id="l6" fx:id="l61211" layoutX="109.0" layoutY="637.0" prefHeight="30.0" prefWidth="240.0" text="Type" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="109.0" layoutY="757.0" onAction="#ajouterPersonnel" prefHeight="48.0" prefWidth="205.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10 0 0 00;" text="Ajouter" />
+                  <Label id="l6" fx:id="l612111" layoutX="109.0" layoutY="705.0" prefHeight="30.0" prefWidth="240.0" text="Adresse" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="1006.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/garage-2.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton layoutX="1006.0" layoutY="63.0" onAction="#retour" prefHeight="65.0" prefWidth="65.0" ripplerFill="#393351" text="Home" textFill="TRANSPARENT" />
+               </children>
+            </AnchorPane>
+            <Pane id="ap_afficher" fx:id="ap_afficher" layoutX="336.0" prefHeight="900.0" prefWidth="1440.0" style="-fx-background-color: #2f2b43 #2f2b43;">
+               <children>
+                  <Pane layoutX="-25.0" layoutY="-178.0" prefHeight="320.0" prefWidth="545.0" rotate="41.6" style="-fx-background-color: #46c43c; -fx-background-radius: 70;" />
+                  <TableView fx:id="table" layoutX="29.0" layoutY="283.0" prefHeight="504.0" prefWidth="1058.0" stylesheets="@gestiondupersonnel.css">
+                     <columns>
+                        <TableColumn id="columnId" fx:id="columnNom" prefWidth="106.0" text="Nom " />
+                        <TableColumn id="columnDesignation" fx:id="columnPrenom" prefWidth="107.0" text="Prénom" />
+                        <TableColumn id="columnDateAjout" fx:id="columnDateNaissance" minWidth="9.0" prefWidth="120.0" text="Date de naissance" />
+                        <TableColumn id="columnCategorie" fx:id="columnGenre" prefWidth="89.0" text="Genre" />
+                        <TableColumn id="columnModeCuisson" fx:id="columnAdresse" prefWidth="118.0" text="Adresse" />
+                        <TableColumn id="columnTempsCuisson" fx:id="columnNumeroTel" prefWidth="145.0" text="Numéro de téléphone" />
+                        <TableColumn id="columnUsername_ger" fx:id="columnEmail" prefWidth="141.0" text="Email" />
+                        <TableColumn id="columnUsername_ger" fx:id="columnType_personnel" prefWidth="113.0" resizable="false" text="Type " />
+                        <TableColumn id="columnUsername_ger" fx:id="columnUserGerant" prefWidth="117.0" resizable="false" text="Inscrit par" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="btnSupprimer" layoutX="990.0" layoutY="242.0" mnemonicParsing="false" onAction="#delete" onKeyTyped="#delete" prefHeight="35.0" prefWidth="97.0" style="-fx-background-color: #ea3e3e;" text="Supprimer" textFill="WHITE" />
+                  <JFXButton fx:id="btnAffecter" layoutX="29.0" layoutY="242.0" maxWidth="97.0" onAction="#affecter" prefHeight="35.0" prefWidth="97.0" style="-fx-background-color: #0f2be7;" text="Affecter" textFill="WHITE" />
+                  <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="1006.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/garage-2.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton layoutX="1006.0" layoutY="63.0" onAction="#retour" prefHeight="65.0" prefWidth="65.0" ripplerFill="#393351" text="Home" textFill="TRANSPARENT" />
+               </children>
+            </Pane>
+            <AnchorPane fx:id="planning" layoutX="337.0" layoutY="-1.0" prefHeight="900.0" prefWidth="1440.0" style="-fx-background-color: #2f2b43 #2f2b43 #2f2b43;">
+               <children>
+                  <JFXDatePicker id="dp1" fx:id="dp1" editable="false" layoutX="527.0" layoutY="312.0" prefHeight="27.0" prefWidth="384.0" styleClass="jfx-date-picker" stylesheets="@gestiondupersonnel.css" />
+                  <Label id="lb1" layoutX="180.0" layoutY="312.0" prefHeight="35.0" prefWidth="265.0" text="Date service" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label id="lb2" layoutX="179.0" layoutY="387.0" prefHeight="30.0" prefWidth="385.0" text="Type service" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox id="cb1" fx:id="cb1" layoutX="527.0" layoutY="394.0" onAction="#av" prefHeight="35.0" prefWidth="377.0" promptText=" Matin" styleClass="jfx-combo-box" stylesheets="@gestiondupersonnel.css" />
+                  <JFXButton id="btn1" fx:id="btn1" layoutX="179.0" layoutY="733.0" onAction="#btnConfirmerAffectation" prefHeight="48.0" prefWidth="205.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10 0 0 00;" text="Confirmer" />
+                  <Label id="lb2" layoutX="179.0" layoutY="462.0" prefHeight="30.0" prefWidth="385.0" text="Heure debut" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label id="lb2" layoutX="179.0" layoutY="537.0" prefHeight="30.0" prefWidth="385.0" text="Heure Fin" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="tf1" editable="false" focusColor="WHITE" layoutX="527.0" layoutY="464.0" prefHeight="35.0" prefWidth="377.0" stylesheets="@gestiondupersonnel.css" />
+                  <JFXTextField fx:id="tf2" editable="false" focusColor="WHITE" layoutX="527.0" layoutY="529.0" prefHeight="35.0" prefWidth="377.0" stylesheets="@gestiondupersonnel.css" />
+                  <Pane layoutX="-25.0" layoutY="-178.0" prefHeight="320.0" prefWidth="545.0" rotate="41.6" style="-fx-background-color: #46c43c; -fx-background-radius: 70;" />
+                  <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="1006.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/garage-2.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton layoutX="1006.0" layoutY="63.0" onAction="#retour" prefHeight="65.0" prefWidth="65.0" ripplerFill="#393351" text="Home" textFill="TRANSPARENT" />
+                  <TableView fx:id="tableRestaurant" layoutX="527.0" layoutY="585.0" prefHeight="219.0" prefWidth="377.0" stylesheets="@gestiondupersonnel.css">
+                    <columns>
+                      <TableColumn fx:id="selectTable" prefWidth="93.0" text="Select" />
+                      <TableColumn fx:id="nomTable" prefWidth="283.0" text="Nom" />
+                    </columns>
+                  </TableView>
+                  <JFXButton id="btn1" fx:id="btn12" layoutX="179.0" layoutY="642.0" onAction="#retourAffectation" prefHeight="48.0" prefWidth="205.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10 0 0 00;" text="Retour" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="planning1" layoutX="336.0" prefHeight="900.0" prefWidth="1440.0" style="-fx-background-color: #2f2b43 #2f2b43 #2f2b43;">
+               <children>
+                  <JFXDatePicker id="dp1" fx:id="dp2" editable="false" layoutX="521.0" layoutY="290.0" prefHeight="27.0" prefWidth="384.0" styleClass="jfx-date-picker" stylesheets="@gestiondupersonnel.css" />
+                  <Label id="lb1" layoutX="174.0" layoutY="290.0" prefHeight="35.0" prefWidth="265.0" text="Date service" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label id="lb2" layoutX="173.0" layoutY="365.0" prefHeight="30.0" prefWidth="385.0" text="Type service" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox id="cb1" fx:id="type_service" layoutX="521.0" layoutY="372.0" onAction="#av2" prefHeight="35.0" prefWidth="377.0" promptText=" Type service" styleClass="jfx-combo-box" stylesheets="@gestiondupersonnel.css" />
+                  <JFXButton id="btn1" fx:id="btn11" layoutX="173.0" layoutY="615.0" onAction="#retourModifierAffectation" prefHeight="48.0" prefWidth="205.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10 0 0 00;" text="Retour" />
+                  <Label id="lb2" layoutX="173.0" layoutY="440.0" prefHeight="30.0" prefWidth="385.0" text="Heure debut" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label id="lb2" layoutX="173.0" layoutY="515.0" prefHeight="30.0" prefWidth="385.0" text="Heure Fin" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="tf11" editable="false" focusColor="WHITE" layoutX="521.0" layoutY="442.0" prefHeight="35.0" prefWidth="377.0" stylesheets="@gestiondupersonnel.css" />
+                  <JFXTextField fx:id="tf22" editable="false" focusColor="WHITE" layoutX="521.0" layoutY="507.0" prefHeight="35.0" prefWidth="377.0" stylesheets="@gestiondupersonnel.css" />
+                  <Pane layoutX="-25.0" layoutY="-178.0" prefHeight="320.0" prefWidth="545.0" rotate="41.6" style="-fx-background-color: #46c43c; -fx-background-radius: 70;" />
+                  <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="1006.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/garage-2.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton layoutX="1006.0" layoutY="63.0" onAction="#retour" prefHeight="65.0" prefWidth="65.0" ripplerFill="#393351" text="Home" textFill="TRANSPARENT" />
+                  <TableView fx:id="tableRestaurant1" layoutX="511.0" layoutY="575.0" prefHeight="219.0" prefWidth="377.0" stylesheets="@gestiondupersonnel.css">
+                     <columns>
+                        <TableColumn fx:id="selectTable1" prefWidth="93.0" text="Select" />
+                        <TableColumn fx:id="nomTable1" prefWidth="283.0" text="Nom" />
+                     </columns>
+                  </TableView>
+                  <JFXButton id="btn1" fx:id="btn111" layoutX="173.0" layoutY="694.0" onAction="#ModifierPlanning" prefHeight="48.0" prefWidth="205.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10 0 0 00;" text="Confirmer" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="affiche_affectation" layoutX="336.0" prefHeight="900.0" prefWidth="1440.0" style="-fx-background-color: #2f2b43 #2f2b43 #2f2b43;">
+               <children>
+                  <Pane layoutX="-25.0" layoutY="-178.0" prefHeight="320.0" prefWidth="545.0" rotate="41.6" style="-fx-background-color: #46c43c; -fx-background-radius: 70;" />
+                  <TableView fx:id="table3" layoutX="29.0" layoutY="283.0" prefHeight="504.0" prefWidth="1058.0" stylesheets="@gestiondupersonnel.css">
+                    <columns>
+                      <TableColumn fx:id="idPersonnel" prefWidth="208.0" text="Identifiant" />
+                      <TableColumn fx:id="nomPersonnel" prefWidth="455.0" text="Nom " />
+                        <TableColumn fx:id="dateService" prefWidth="168.0" text="Date de service" />
+                        <TableColumn fx:id="idTable" prefWidth="225.0" text="Id table" />
+                    </columns>
+                  </TableView>
+                  <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="1006.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/garage-2.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton layoutX="1006.0" layoutY="63.0" onAction="#retour" prefHeight="65.0" prefWidth="65.0" ripplerFill="#393351" text="Home" textFill="TRANSPARENT" />
+                  <Button fx:id="btnSupprimer1" layoutX="990.0" layoutY="241.0" mnemonicParsing="false" onAction="#PaneModifierPlanning" onKeyTyped="#delete" prefHeight="35.0" prefWidth="97.0" style="-fx-background-color: #00861d;" text="Modifier" textFill="WHITE" />
+                  <Button fx:id="btnSupprimer11" layoutX="29.0" layoutY="241.0" mnemonicParsing="false" onAction="#deletePersonnelService" onKeyTyped="#delete" prefHeight="35.0" prefWidth="97.0" style="-fx-background-color: #bf0202;" text="Supprimer" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

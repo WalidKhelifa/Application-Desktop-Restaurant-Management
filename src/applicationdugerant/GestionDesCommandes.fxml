@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="applicationdugerant.GestionDesCommandesController">
+   <children>
+      <Pane id="app_afficher" prefHeight="900.0" prefWidth="1769.0" style="-fx-background-color: #2f2b43; -fx-background-radius: 5;">
+         <children>
+            <AnchorPane layoutY="-2.0" prefHeight="900.0" prefWidth="338.0" style="-fx-background-color: #393351;">
+               <children>
+                  <VBox layoutY="387.0" prefHeight="387.0" prefWidth="336.0">
+                     <children>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#AfficherCommande" prefHeight="71.0" prefWidth="337.0" stylesheets="@gestiondurestaurant.css" text="Liste des commandes" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Deconnecter" prefHeight="71.0" prefWidth="348.0" stylesheets="@gestiondurestaurant.css" text="Déconnexion" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <Pane layoutX="1.0" layoutY="274.0" prefHeight="77.0" prefWidth="336.0" style="-fx-background-color: #0099ff; -fx-background-radius: 5;">
+                     <children>
+                        <Label layoutX="63.0" layoutY="27.0" text="Gestion des commandes">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="141.0" fitWidth="141.0" layoutX="87.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/l2.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="38.0" fitWidth="37.0" layoutX="172.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/iconfinder_Cute%20Ball%20-%20Go_32133.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="107.0" layoutY="205.0" prefHeight="29.0" prefWidth="65.0" text="Online" textFill="#72ff36eb">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="125.0" layoutY="122.0" prefHeight="17.0" prefWidth="65.0" text="My resto" textFill="#ffa900">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane id="ap_home" fx:id="ap_home" layoutX="337.0" layoutY="-1.0" prefHeight="900.0" prefWidth="1440.0" style="-fx-background-color: #2f2b43 #2f2b43;">
+               <children>
+                  <Pane layoutX="-25.0" layoutY="-178.0" prefHeight="320.0" prefWidth="545.0" rotate="41.6" style="-fx-background-color: #0099ff; -fx-background-radius: 70;" />
+                  <Label layoutX="29.0" layoutY="249.0" prefHeight="387.0" prefWidth="1211.0" text="Gestion des commandes" textFill="WHITE">
+                     <font>
+                        <Font size="90.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="1006.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/garage-2.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton layoutX="1006.0" layoutY="93.0" onAction="#retour" prefHeight="65.0" prefWidth="65.0" ripplerFill="#393351" text="Home" textFill="TRANSPARENT" />
+               </children>
+            </AnchorPane>
+            <Pane id="ap_afficher" fx:id="ap_afficher" layoutX="336.0" prefHeight="900.0" prefWidth="1440.0" style="-fx-background-color: #2f2b43 #2f2b43;">
+               <children>
+                  <Pane layoutX="-25.0" layoutY="-178.0" prefHeight="320.0" prefWidth="545.0" rotate="41.6" style="-fx-background-color: #0099ff; -fx-background-radius: 70;" />
+                  <TableView fx:id="table" layoutX="55.0" layoutY="283.0" prefHeight="504.0" prefWidth="1019.0" stylesheets="@gestiondescommandes.css">
+                     <columns>
+                        <TableColumn id="columnId" fx:id="id" prefWidth="102.0" text="Identifiant" />
+                        <TableColumn id="columnDesignation" fx:id="date" prefWidth="138.0" text="Date" />
+                        <TableColumn id="columnDateAjout" fx:id="heure" minWidth="9.0" prefWidth="128.0" text="Heure" />
+                        <TableColumn id="columnCategorie" fx:id="montant" prefWidth="138.0" text="Montant" />
+                        <TableColumn id="columnModeCuisson" fx:id="type" prefWidth="153.0" text="Type " />
+                        <TableColumn id="columnUsername_ger" fx:id="id_client" prefWidth="177.0" text="Id client" />
+                        <TableColumn id="columnUsername_ger" fx:id="userName" prefWidth="181.0" resizable="false" text="Nom client" />
+                     </columns>
+                  </TableView>
+                  <JFXButton fx:id="btndetails" layoutX="975.0" layoutY="242.0" onAction="#AfficherDetails" prefHeight="35.0" prefWidth="97.0" style="-fx-background-color: #ea3e3e;" text="Détails" textFill="WHITE" />
+                  <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="1006.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/garage-2.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton layoutX="1006.0" layoutY="93.0" onAction="#retour" prefHeight="65.0" prefWidth="65.0" ripplerFill="#393351" text="Home" textFill="TRANSPARENT" />
+               </children>
+            </Pane>
+            <AnchorPane fx:id="ap_details" layoutX="336.0" prefHeight="900.0" prefWidth="1440.0" style="-fx-background-color: #2f2b43 #2f2b43 #2f2b43;">
+               <children>
+                  <TableView fx:id="table2" layoutX="55.0" layoutY="283.0" prefHeight="504.0" prefWidth="1019.0" stylesheets="@gestiondescommandes.css">
+                    <columns>
+                      <TableColumn fx:id="id_plat" prefWidth="230.0" text="Identifiant" />
+                      <TableColumn fx:id="designation" minWidth="0.0" prefWidth="316.0" text="Désignation" />
+                        <TableColumn fx:id="qte" minWidth="0.0" prefWidth="239.0" text="Quantité" />
+                        <TableColumn fx:id="portion" minWidth="0.0" prefWidth="232.0" text="Portion" />
+                    </columns>
+                  </TableView>
+                  <JFXButton layoutX="55.0" layoutY="247.0" onAction="#AfficherCommande" prefHeight="29.0" prefWidth="84.0" style="-fx-background-color: #927635;" text="Retour" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <Pane layoutX="-25.0" layoutY="-178.0" prefHeight="320.0" prefWidth="545.0" rotate="41.6" style="-fx-background-color: #0099ff; -fx-background-radius: 70;" />
+                  <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="1006.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/garage-2.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton layoutX="1006.0" layoutY="93.0" onAction="#retour" prefHeight="65.0" prefWidth="65.0" ripplerFill="#393351" text="Home" textFill="TRANSPARENT" />
+               </children>
+            </AnchorPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

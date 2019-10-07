@@ -1,0 +1,24 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+/* hover = colorer apres le click sur le button */
+
+.button:hover {
+    -fx-background-color: yellow;
+}
+.button:pressed
+{
+    -fx-background-color: #46c43c;
+    -fx-background-radius: 30 0 0 30;
+}
+
+.input .jfx-text-field, .jfx-password-field {
+    -jfx-prompt-text-fill: WHITE;
+    -jfx-focus-color: WHITE;
+    -jfx-unfocus-color: WHITE;
+    
+}
