@@ -1,4 +1,4 @@
-##Desktop application developed in JavaFX for restaurant management
+## Desktop application developed in JavaFX for restaurant management
 
 1.Télécharger Netbeans.
 2.Télécharger SceneBuiler.
