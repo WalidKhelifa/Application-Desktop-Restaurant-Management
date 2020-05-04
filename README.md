@@ -4,7 +4,7 @@
 * Télécharger Netbeans.  
 * Télécharger SceneBuiler.  
 * Télécharger Mamp(Mac) ou Wamp(Windows) pour gèrer la Base de donées.  
-* Télécharger at ajouter les 3 Jars :    
+* Télécharger at ajouter les 3 Jars sur [lien] (https://www.mysql.com/fr/products/connector/)   
 mysql-connector-java-8.0.16.jar.   
 com.mysql.jdbc_5.1.5.jar.      
 jfoenix-8.0.8.jar.   
