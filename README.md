@@ -1,9 +1,9 @@
 ## Desktop application developed in JavaFX for restaurant management
 ## Setup
 
-* Télécharger Netbeans.  
-* Télécharger SceneBuiler.  
-* Télécharger Mamp(Mac) ou Wamp(Windows) pour gèrer la Base de donées.  
+* Télécharger [Netbeans](https://netbeans.org/downloads/8.2/rc/).    
+* Télécharger [SceneBuiler](https://gluonhq.com/products/scene-builder/).    
+* Télécharger [Mamp(Mac) ou Wamp(Windows)](https://www.mamp.info/fr/downloads/) pour gèrer la Base de donées.  
 * Télécharger et ajouter les 3 Jars :    
 [mysql-connector-java-8.0.16.jar](https://www.mysql.com/fr/products/connector/).     
 [com.mysql.jdbc_5.1.5.jar](https://www.mysql.com/fr/products/connector/).        
