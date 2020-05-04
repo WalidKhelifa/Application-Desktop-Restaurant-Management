@@ -1,6 +1,6 @@
 ## Desktop application developed in JavaFX for restaurant management
 
-1.Télécharger Netbeans.
+1.Télécharger Netbeans.</ul>
 2.Télécharger SceneBuiler.
 3.Télécharger Mamp(Mac) ou Wamp(Windows) pour gèrer la Base de donées.
 4.Télécharger at ajouter les 3 Jars :
