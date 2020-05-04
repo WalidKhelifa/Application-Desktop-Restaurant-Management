@@ -11,3 +11,7 @@
 * Télécharger la Base de donées depuis ce projet dans un fichier nomé restaurant.sql.   
 * Importer la Base de donées dans le PhpMyAdmin. 
 * Lancer l'application. 
+
+Quelque capture sur l'application :
+
+<img width="1439" alt="Capture d’écran 2020-05-05 à 00 29 06" src="https://user-images.githubusercontent.com/56236244/81023352-f7e55900-8e67-11ea-9ca4-dc53785c1db6.png">
