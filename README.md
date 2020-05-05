@@ -9,7 +9,7 @@
 [com.mysql.jdbc_5.1.5.jar](https://www.mysql.com/fr/products/connector/).        
 [jfoenix-8.0.8.jar](https://jar-download.com/artifacts/com.jfoenix/jfoenix/8.0.2/source-code).     
 * Télécharger la Base de donées depuis ce projet dans un fichier nomé restaurant.sql.   
-* Importer la Base de donées dans le PhpMyAdmin. 
+* Importer la Base de donées dans PhpMyAdmin. 
 * Lancer l'application. 
 
 Quelques captures sur l'application :
