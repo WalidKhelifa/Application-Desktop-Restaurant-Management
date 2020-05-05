@@ -12,7 +12,7 @@
 * Importer la Base de donées dans PhpMyAdmin. 
 * Lancer l'application. 
 
-Quelques captures sur l'application :
+Quelques captures d'application :
 
 <img width="700" alt="Capture d’écran 2020-05-05 à 00 29 06" src="https://user-images.githubusercontent.com/56236244/81023352-f7e55900-8e67-11ea-9ca4-dc53785c1db6.png">
 <img width="700" alt="Capture d’écran 2020-05-05 à 00 29 22" src="https://user-images.githubusercontent.com/56236244/81023588-c91bb280-8e68-11ea-8953-0bbc51d4f3a8.png">
