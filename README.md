@@ -1,4 +1,4 @@
-## Desktop application developed in JavaFX for restaurant management
+# Desktop application developed in JavaFX for restaurant management
 ##                             Setup
 
 * Télécharger [Netbeans](https://netbeans.org/downloads/8.2/rc/).    
